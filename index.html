@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./index.css">
+    <script src="index.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Happy Birthday NAME!</title>
+    <style>
+      .profile-section > p:not(.profile-title) {
+        font-size: 14px!important;
+        letter-spacing: 0px!important;
+      }
+      .profile-title {
+        font-size: 18px!important;
+      }
+      .work-detail {
+        letter-spacing: 1px!important;
+      }
+
+    </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      function play() {
+        document.getElementById("content").classList.remove("hide");
+        document.getElementById("play").remove();
+
+        AOS.init({
+          duration: 1800,
+        });
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
+    </script>
+  </head>
+  <body>
+    <audio id="audio">
+      <source src="./sound.mp3">
+    </audio>
+    <div class="name-section">
+      <p class="name">Dear NAME</p>
+      <p class="job">The most beautiful girl</p>
+    </div>
+    <div id="play" class="play" onclick="play()">
+      PLAY
+    </div>
+    <div class="hide" id="content" data-aos="fade-up">
+      <div class="love-letter">
+        <p style="font-weight: bold;">Happy Birthday! NAME!</p>
+      </div>
+      <div class="name-section">
+        <p class="name">From Takuto Yoshikai</p>
+        <p class="job">Your Boy Friend</p>
+      </div>
+    </div>
+
+  </body>
+</html>
